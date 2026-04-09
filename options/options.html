@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filify Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header class="hero">
+        <h1>Filify Settings</h1>
+        <p>Save your profile once, then autofill job applications everywhere.</p>
+      </header>
+
+      <section class="card">
+        <h2>Core Profile</h2>
+        <div class="grid">
+          <label>Full Name <input id="fullName" type="text" /></label>
+          <label>First Name <input id="firstName" type="text" /></label>
+          <label>Last Name <input id="lastName" type="text" /></label>
+          <label>Email / Gmail <input id="email" type="email" /></label>
+          <label>Phone Number <input id="phone" type="text" /></label>
+          <label>College / University <input id="college" type="text" /></label>
+          <label>College SRN <input id="srn" type="text" /></label>
+          <label>Degree <input id="degree" type="text" /></label>
+          <label>Course <input id="course" type="text" /></label>
+          <label>Specialization <input id="specialization" type="text" /></label>
+          <label>CGPA <input id="cgpa" type="text" /></label>
+          <label>10th Percentage <input id="tenthPercentage" type="text" /></label>
+          <label>12th Percentage <input id="twelfthPercentage" type="text" /></label>
+          <label>Graduation Year <input id="graduationYear" type="text" /></label>
+          <label>Location <input id="location" type="text" /></label>
+          <label>Address <input id="address" type="text" /></label>
+          <label>Experience (Years) <input id="experienceYears" type="text" /></label>
+          <label>Skills (comma-separated) <input id="skills" type="text" /></label>
+          <label>LinkedIn URL <input id="linkedin" type="url" /></label>
+          <label>GitHub URL <input id="github" type="url" /></label>
+          <label>Portfolio URL <input id="portfolio" type="url" /></label>
+          <label>Resume URL <input id="resumeUrl" type="url" /></label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Custom Parameters</h2>
+        <p>Add any extra fields used in applications. Example: Date of Birth, PAN, Current CTC, Notice Period.</p>
+
+        <div class="grid customInputGrid">
+          <label>Key <input id="customKey" type="text" placeholder="noticePeriod" /></label>
+          <label>Label <input id="customLabel" type="text" placeholder="Notice Period" /></label>
+          <label>Aliases (comma-separated)
+            <input id="customAliases" type="text" placeholder="notice, joining time" />
+          </label>
+          <label>Value <input id="customValue" type="text" placeholder="30 days" /></label>
+        </div>
+        <button id="addCustomBtn" class="btn">Add Custom Field</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Key</th>
+              <th>Label</th>
+              <th>Aliases</th>
+              <th>Value</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="customFieldsTable"></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Autofill Settings</h2>
+        <label class="switchRow"><input id="autofillEnabled" type="checkbox" /> Enable autofill engine</label>
+        <label class="switchRow"><input id="autoFillOnPageLoad" type="checkbox" /> Try autofill automatically on page load</label>
+        <label class="switchRow"><input id="skipIfFieldHasValue" type="checkbox" /> Do not overwrite already filled fields</label>
+      </section>
+
+      <section class="card">
+        <h2>AI Settings (Cover Letter)</h2>
+        <p>Use any OpenAI-compatible API. Your key is stored in your browser local extension storage.</p>
+        <div class="grid">
+          <label>Provider
+            <select id="aiProvider">
+              <option value="openai">OpenAI-compatible</option>
+            </select>
+          </label>
+          <label>API Endpoint
+            <input id="aiEndpoint" type="url" placeholder="https://api.openai.com/v1/chat/completions" />
+          </label>
+          <label>Model
+            <input id="aiModel" type="text" placeholder="gpt-4o-mini" />
+          </label>
+          <label>API Key
+            <input id="aiApiKey" type="password" placeholder="sk-..." />
+          </label>
+        </div>
+      </section>
+
+      <section class="actionsBar">
+        <button id="saveBtn" class="btn primary">Save All Changes</button>
+        <button id="exportBtn" class="btn">Export Data</button>
+        <label class="btn fileBtn" for="importInput">Import Data</label>
+        <input id="importInput" type="file" accept="application/json" hidden />
+      </section>
+
+      <p id="status" class="status"></p>
+    </main>
+
+    <script src="options.js" type="module"></script>
+  </body>
+</html>

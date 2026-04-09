@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap");
+
+:root {
+  --bg: #f2f7ff;
+  --surface: #ffffff;
+  --text: #13213a;
+  --muted: #5e6b84;
+  --brand: #006d77;
+  --brand-strong: #00535a;
+  --line: #d7e2f0;
+  --ok: #1e7f49;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 380px;
+  min-height: 560px;
+  font-family: Manrope, "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top right, #c7efff 0, #c7efff 10%, transparent 40%),
+    radial-gradient(circle at left bottom, #ffd6a8 0, #ffd6a8 12%, transparent 46%),
+    var(--bg);
+}
+
+.wrap {
+  padding: 14px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+}
+
+.hero p {
+  margin: 4px 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 20px rgba(2, 46, 74, 0.05);
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+}
+
+button,
+input,
+textarea {
+  width: 100%;
+  margin: 6px 0;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  padding: 9px 10px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.primary {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.primary:hover {
+  background: var(--brand-strong);
+}
+
+.ghost {
+  background: #fff;
+  color: var(--text);
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.toggleRow input {
+  width: 42px;
+  margin: 0;
+}
+
+.history {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 120px;
+  overflow: auto;
+}
+
+.history li {
+  font-size: 12px;
+  padding: 7px;
+  border-radius: 8px;
+  background: #f6f9fe;
+  margin-bottom: 6px;
+}
+
+.status {
+  min-height: 16px;
+  font-size: 12px;
+  color: var(--ok);
+}

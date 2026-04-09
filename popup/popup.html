@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filify</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hero">
+        <h1>Filify</h1>
+        <p>Autofill job applications faster.</p>
+      </header>
+
+      <section class="card actions">
+        <button id="fillNowBtn" class="primary">Fill Current Form</button>
+        <label class="toggleRow">
+          <span>Autofill Enabled</span>
+          <input id="autofillToggle" type="checkbox" />
+        </label>
+        <button id="openOptionsBtn" class="ghost">Open Full Profile Settings</button>
+      </section>
+
+      <section class="card">
+        <h2>AI Cover Letter</h2>
+        <input id="roleInput" type="text" placeholder="Role (e.g., SDE Intern)" />
+        <input id="companyInput" type="text" placeholder="Company" />
+        <textarea id="jdInput" rows="4" placeholder="Paste job description"></textarea>
+        <button id="generateBtn" class="primary">Generate Cover Letter</button>
+        <textarea id="coverLetterOutput" rows="8" placeholder="Generated letter appears here"></textarea>
+      </section>
+
+      <section class="card">
+        <h2>Recent Autofill Activity</h2>
+        <ul id="historyList" class="history"></ul>
+      </section>
+
+      <p id="status" class="status"></p>
+    </main>
+
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>

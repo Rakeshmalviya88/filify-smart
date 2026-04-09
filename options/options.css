@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Sora:wght@600;700&display=swap");
+
+:root {
+  --bg: #f7fafc;
+  --surface: #ffffff;
+  --text: #0f213f;
+  --muted: #55657c;
+  --line: #d9e3ee;
+  --brand: #005f73;
+  --brand-hover: #0a4e5d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Manrope, "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 85% 0, #d5f4ff 0, transparent 30%),
+    radial-gradient(circle at 0 100%, #ffe2c6 0, transparent 26%),
+    var(--bg);
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 16px 46px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: Sora, sans-serif;
+}
+
+.hero p {
+  color: var(--muted);
+  margin: 8px 0 18px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 12px 24px rgba(18, 43, 72, 0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-family: Sora, sans-serif;
+  font-size: 17px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+
+input,
+select,
+button {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 10px;
+  font: inherit;
+}
+
+.switchRow {
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.switchRow input {
+  margin-right: 8px;
+}
+
+.btn {
+  cursor: pointer;
+  font-weight: 700;
+  background: #fff;
+}
+
+.primary {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.primary:hover {
+  background: var(--brand-hover);
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 9px;
+}
+
+.customInputGrid {
+  margin-bottom: 10px;
+}
+
+.actionsBar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.fileBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status {
+  font-size: 13px;
+  min-height: 18px;
+  color: #1d7b45;
+  margin-top: 10px;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    padding: 18px 12px 28px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+}
